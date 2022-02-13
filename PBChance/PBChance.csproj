@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PBChance</RootNamespace>
     <AssemblyName>PBChance</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveSplit.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\LiveSplit\LiveSplit\bin\Release\LiveSplit.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -41,6 +44,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UpdateManager, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\LiveSplit\LiveSplit\bin\Release\UpdateManager.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,22 +58,6 @@
     <Compile Include="UI\Components\PBChanceSettings.Designer.cs">
       <DependentUpon>PBChanceSettings.cs</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\LiveSplit.Core\LiveSplit.Core.csproj">
-      <Project>{6de847db-20a3-4848-aeee-1b4364aecdfb}</Project>
-      <Name>LiveSplit.Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LiveSplit.View\LiveSplit.View.csproj">
-      <Project>{f8cf1482-0687-44f3-aba1-967e10c3bb96}</Project>
-      <Name>LiveSplit.View</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\UpdateManager\UpdateManager.csproj">
-      <Project>{56DEA3A0-2EB7-493B-B50F-A5E3AA8AE52A}</Project>
-      <Name>UpdateManager</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UI\Components\PBChanceSettings.resx">

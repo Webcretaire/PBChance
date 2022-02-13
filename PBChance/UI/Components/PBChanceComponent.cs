@@ -3,8 +3,6 @@ using LiveSplit.UI.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LiveSplit.UI;
 using System.Drawing;
 using System.Windows.Forms;
@@ -1231,6 +1229,9 @@ InterruptedRunBecauseToMuchFailures:
 
         void PrepareDraw(LiveSplitState state, LayoutMode mode)
         {
+            InternalComponent.NameLabel.HasShadow
+                = InternalComponent.ValueLabel.HasShadow
+                    = state.LayoutSettings.DropShadows;
             InternalComponent.NameLabel.ForeColor = state.LayoutSettings.TextColor;
             InternalComponent.ValueLabel.ForeColor = state.LayoutSettings.TextColor;
             InternalComponent.PrepareDraw(state, mode);
